@@ -119,3 +119,34 @@
         height: 290px;
     }
 }
+
+.wave-card {
+    width: 500px;
+    height: 275px;
+    background: url('../assets/wave_card_bg.svg') center/contain no-repeat;
+    @include m.display-flex(start, start, nowrap, column, 0, 35px);
+
+    &__avatar {
+        border-radius: 50%;
+        margin: 19px 0 0 17px;
+    }
+
+    &__quote {
+        margin: 0 40px;
+        line-height: 1.4;
+        text-align: justify;
+        @include m.font(20px, 400, v.$color_white);
+    }
+
+    @media (max-width: v.$media_md) {
+        width: 320px;
+        height: 175px;
+        row-gap: 20px;
+        background: url('../assets/wave_card_bg.svg') 50% 0 /contain no-repeat;
+
+        &__quote {
+            line-height: 1;
+            @include m.font(13px, 400, v.$color_white);
+        }
+    }
+}
