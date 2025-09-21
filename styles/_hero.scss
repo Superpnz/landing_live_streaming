@@ -81,6 +81,11 @@
                 @include m.font(45px, 700, v.$color_black);
             }
         }
+        @media(max-width: v.$media_min) {
+            .hero__title {
+                @include m.font(40px, 700, v.$color_black);
+            }
+        }
     }
 
     &__notify{

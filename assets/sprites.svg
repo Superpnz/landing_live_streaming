@@ -8,10 +8,10 @@
         <path d="M2.09998 8.86467V9.25939C2.23491 8.93726 2.38372 8.62307 2.54308 8.31512L2.09998 8.86467Z" fill="white" />
     </symbol>
 
-    <symbol width="27" height="22" viewBox="0 0 27 22" id="burger-icon">
-        <rect width="27" height="2" fill="white"/>
-        <rect y="10" width="27" height="2" fill="white"/>
-        <rect y="20" width="27" height="2" fill="white"/>
+    <symbol viewBox="0 0 27 22" id="burger-icon">
+        <line x1="0" y1="2" x2="33" y2="2" stroke-width="3"/>
+        <line x1="0" y1="11" x2="33" y2="11" stroke-width="3"/>
+        <line x1="0" y1="20" x2="33" y2="20" stroke-width="3"/>
     </symbol>
 
     <symbol viewBox="0 0 29 41" id="bulb-icon">
