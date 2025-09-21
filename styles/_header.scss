@@ -132,6 +132,7 @@
         @include m.position(fixed, 999, 0);
 
         &__list {
+            margin: 25px;
             @include m.display-flex(start, start, nowrap, column, 0, 20px);
 
             &-item {
