@@ -24,6 +24,10 @@
         }
 
         .hero__action-btn {
+            display: inline-block;
+            text-decoration: none;
+            line-height: 80px;
+            text-align: center;
             width: 379px;
             height: 80px;
             border-radius: 90px;
@@ -69,6 +73,7 @@
             .hero__action-btn {
                 width: 259px;
                 height: 52px;
+                line-height: 52px;
                 @include m.font(18px, 500, v.$color_white);
             }
         }
