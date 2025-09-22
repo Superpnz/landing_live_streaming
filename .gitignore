@@ -1,5 +1,5 @@
 node_modules
-dist
+dist/index.css.map
 public
 build
 .parcel-cache
