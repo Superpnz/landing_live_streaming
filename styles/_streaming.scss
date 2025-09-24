@@ -1,0 +1,198 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+body.two__page {
+    background-color: v.$color_darkblue;
+}
+
+.streaming {
+    padding: 51px 0 190px 0;
+
+    &__content {
+        width: 100%;
+        max-width: 977px;
+        height: 100%;
+        max-height: 950px;
+        margin: 0 auto;
+        padding: 50px 41px 39px 30px;
+        border-radius: 20px;
+        background-color: color.adjust(v.$color_white, $alpha: -0.8);
+        @include m.display-flex(start, center, nowrap, column, 0, 0);
+
+        @media (max-width: v.$media_xl) {
+            width: 95%;
+        }
+
+        @media (max-width: v.$media_md) {
+            padding: 10px;
+        }
+    }
+
+    &__title {
+        margin:0 0 60px;
+        @include m.font(60px, 400, v.$color_white);
+
+        @media (max-width: v.$media_xl) {
+            @include m.font(45px, 400, v.$color_white);
+        }
+
+        @media (max-width: v.$media_md) {
+            margin:0 0 30px;
+            @include m.font(35px, 400, v.$color_white);
+        }
+
+        @media (max-width: v.$media_min) {
+            white-space: nowrap;
+            @include m.font(25px, 400, v.$color_white);
+        }
+    }
+
+    &__subtitle {
+        align-self: flex-start;
+        @include m.font(30px, 500, v.$color_white);
+
+        @media (max-width: v.$media_xl) {
+            @include m.font(25px, 500, v.$color_white);
+        }
+
+        @media (max-width: v.$media_min) {
+            @include m.font(22px, 500, v.$color_white);
+        }
+    }
+
+    &__description {
+        margin: 10px 0 40px 0;
+        @include m.font(20px, 300, v.$color_white);
+
+        @media (max-width: v.$media_lg) {
+            @include m.font(18px, 300, v.$color_white);
+        }
+
+        @media (max-width: v.$media_md) {
+            @include m.font(15px, 300, v.$color_white);
+        }
+
+    }
+
+    &__link {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 5px; 
+        @include m.font(30px, 500, v.$color_white);
+
+        &:hover {
+            @extend %hover-black;
+        }
+
+        @media (max-width: v.$media_xl) {
+            @include m.font(25px, 500, v.$color_white);
+        }
+
+        @media (max-width: v.$media_md) {
+            @include m.font(20px, 500, v.$color_white);
+        }
+
+        @media (max-width: v.$media_md) {
+            @include m.font(20px, 500, v.$color_white);
+        }
+    }
+}
+
+.streaming-section {
+    position: relative;
+    overflow: hidden;
+
+    &__bg-cloud {
+        @extend %cloud-template;
+    }
+
+    .cloud--l {
+        width: 1123px;
+        height: 452px;
+        @include m.position(absolute, 1, -1, top, left, 750px, -550px);
+
+        @media (max-width: v.$media_xl) {
+            width: 923px;
+            height: 362px;
+            @include m.position(absolute, 1, -1, top, left, 860px, -550px);
+        }
+
+        @media (max-width: v.$media_lg) {
+            @include m.position(absolute, 1, -1, top, left, 760px, -550px);
+        }
+
+        @media (max-width: v.$media_md) {
+            width: 823px;
+            height: 312px;
+            @include m.position(absolute, 1, -1, top, left, 650px, -600px);
+        }
+
+        @media (max-width: v.$media_sm) {
+            @include m.position(absolute, 1, -1, top, left, 800px, -600px);
+        }
+
+        @media (max-width: v.$media_min) {
+            width: 773px;
+            height: 300px;
+            @include m.position(absolute, 1, -1, top, left, 850px, -630px);
+        }
+    }
+
+    .cloud--r {
+        width: 1123px;
+        height: 452px;
+        @include m.position(absolute, 1, -1, top, left, 300px, 1020px);
+
+        @media (max-width: v.$media_xl) {
+            width: 923px;
+            height: 362px;
+            @include m.position(absolute, 1, -1, top, left, 300px, 820px);
+        }
+
+        @media (max-width: v.$media_md) {
+            width: 823px;
+            height: 312px;
+            @include m.position(absolute, 1, -1, top, left, 220px, 400px);
+        }
+
+        @media (max-width: v.$media_min) {
+            @include m.position(absolute, 1, -1, top, left, 220px, 150px);
+        }
+    }
+}
+
+.cloud--rr {
+    width: 1123px;
+    height: 452px;
+    @include m.position(absolute, 1, -1, top, left, 180px, 1400px);
+
+    @media (max-width: v.$media_xxl) {
+        @include m.position(absolute, 1, -1, top, left, 180px, 900px);
+    }
+
+    @media (max-width: v.$media_xl) {
+        width: 923px;
+        height: 362px;
+        @include m.position(absolute, 1, -1, top, left, 180px, 800px);
+    }
+
+    @media (max-width: v.$media_lg) {
+        width: 823px;
+        height: 312px;
+        @include m.position(absolute, 1, -1, top, left, 470px, 600px);
+    }
+
+    @media (max-width: v.$media_md) {
+        @include m.position(absolute, 1, -1, top, left, 540px, 400px);
+    }
+
+    @media (max-width: v.$media_md) {
+        @include m.position(absolute, 1, -1, top, left, 540px, 250px);
+    }
+
+    @media (max-width: v.$media_min) {
+        @include m.position(absolute, 1, -1, top, left, 540px, 180px);
+    }
+}
