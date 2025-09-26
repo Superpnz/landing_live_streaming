@@ -1,26 +1,17 @@
 {
-  "name": "sass_live_streaming",
+  "name": "landing_live_streaming",
   "version": "1.0.0",
-  "description": "landing page",
-  "source": "index.html",
+  "description": "[Link to page](https://superpnz.github.io/landing_live_streaming/)\r ## 🎨 Design\r **Figma mockup:** [View design in Figma](https://www.figma.com/design/QqRjLgoPQ43mdfzHl66Ua3/live-streaming--design-?node-id=1-3&t=BkkohFBzYO6bQTQK-0)",
   "scripts": {
-    "sass:watch": "sass --style=compressed --watch styles:dist",
-    "parcel:watch": "parcel serve --dist-dir public",
-    "parcel:build": "parcel build --dist-dir build --public-url ./"
+    "dev": "parcel src/*.html src/pages/*.html --public-url ./",
+    "build": "parcel build src/*.html src/pages/*.html --public-url ./"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Superpnz/landing_live_streaming.git"
-  },
+  "keywords": [],
   "author": "Maxim Anikeev",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Superpnz/landing_live_streaming/issues"
-  },
-  "homepage": "https://github.com/Superpnz/landing_live_streaming#readme",
   "devDependencies": {
-    "@parcel/transformer-raw": "^2.15.4",
-    "parcel": "^2.9.3",
-    "sass": "^1.92.1"
+    "@parcel/transformer-sass": "^2.16.0",
+    "parcel": "^2.16.0",
+    "sass": "^1.93.2"
   }
 }
